@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:untitled/screen/liquidate_screen.dart';
 
 class Liquidate extends StatelessWidget {
   int? itemPrise;
@@ -9,7 +11,9 @@ class Liquidate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){},
+      onTap: (){
+        Get.to(LiquidateScreen(itemPrise));
+      },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(

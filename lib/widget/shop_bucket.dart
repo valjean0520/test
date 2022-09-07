@@ -47,7 +47,7 @@ class ShopBucketTile extends StatelessWidget {
                 Text('$itemName')
               ],
             ),
-            Obx(() => shopBucketController.selectEveryTile.value == false
+            Obx(() => shopBucketController.selectEveryTile.value
                 ? TextButton(onPressed: () {}, child: const Text('삭제'))
                 : Container())
           ],
@@ -74,6 +74,7 @@ class ShopBucketTile extends StatelessWidget {
                         shopBucketController.fnTotalItemCountRemove();
                       },
                       child: Container(
+                        color: itemCount <= 1 ? Colors.grey : Colors.black,
                         width: 30,
                         height: 30,
                         decoration: const BoxDecoration(

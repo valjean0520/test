@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 class ShopBucketController extends GetxController {
+  RxInt shopBucketPrise = 0.obs;
   RxList shopBucketList = [].obs;
 
   RxBool shopBucketTileCheck = false.obs;
